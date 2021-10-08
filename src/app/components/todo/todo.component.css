@@ -1,16 +1,23 @@
-.todo {
-  --height: 50px;
-  display: flex;
-  justify-content: space-between;
+.todo, .todo * {
+  user-select: none;
 }
+
+.todo {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.counter,
+.delete {
+  height: 100%;
+  aspect-ratio: 1;
+} 
 
 /*  */
 /*  */
 /*  */
 
 .counter {
-  width: var(--height);
-  height: var(--height);
   background-color: rgb(50, 134, 78);
   color: white;
   display: grid;
@@ -26,17 +33,18 @@
 .content {
   width: 100%;
   padding: .2em;
-  user-select: none;
   display: flex;
   flex-direction: column;
   background: linear-gradient(45deg, rgb(184, 225, 249), rgb(133, 196, 232));
 }
 
-.content > span:first-child {
-  font-size: 1.05rem;
+.content h3 {
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: .25em;
 }
 
-.content > span:nth-child(2) {
+.content p {
   font-style: italic;
 }
 
@@ -51,8 +59,6 @@
 .delete {
   display: grid;
   place-items: center;
-  height: var(--height);
-  width: var(--height);
 }
 
 .delete button {

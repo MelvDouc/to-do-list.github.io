@@ -3,7 +3,7 @@
     <app-todo
       [counter]="i + 1"
       [todo]="todo"
-      (divClick)="toggleDone(todo.id)"
+      (counterClick)="toggleDone(todo.id)"
       (btnClick)="remove(todo.id)"
     ></app-todo>
   </li>

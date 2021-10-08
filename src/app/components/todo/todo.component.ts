@@ -9,7 +9,7 @@ import { Todo } from 'src/app/types/Todo';
 export class TodoComponent implements OnInit {
   @Input() counter!: number;
   @Input() todo!: Todo;
-  @Output() divClick = new EventEmitter();
+  @Output() counterClick = new EventEmitter();
   @Output() btnClick = new EventEmitter();
 
   constructor() { }
@@ -17,8 +17,8 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDivClick(): void {
-    this.divClick.emit();
+  onCounterClick(): void {
+    this.counterClick.emit();
   }
 
   onButtonClick(): void {

@@ -1,12 +1,14 @@
 <div class="todo">
-  <div class="counter">{{ counter }}</div>
+  <div
+    class="counter"
+    (dblclick)="onCounterClick()"
+  >{{ counter }}</div>
   <div
     class="content"
     [ngClass]="{'done': todo.isDone}"
-    (dblclick)="onDivClick()"
    >
-    <span>{{ todo.content }}</span>
-    <span>{{ todo.date }}</span>
+    <h3>{{ todo.content }}</h3>
+    <p>{{ todo.date }}</p>
   </div>
   <div class="delete">
     <button (click)="onButtonClick()">×</button>
