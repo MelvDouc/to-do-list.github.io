@@ -9,8 +9,14 @@ header h1 {
 }
 
 main {
+  --rgb: 45, 5, 25;
   display: grid;
   grid-template-rows: auto 1fr;
+  background: linear-gradient(
+    45deg,
+    rgba(var(--rgb), 0.5),
+    rgba(var(--rgb), 0.3)
+  );
 }
 
 main > * {

@@ -28,6 +28,11 @@
   gap: .2em;
 }
 
+.form-group label {
+  background: rgba(255, 255, 255, .6);
+  padding: .1em;
+}
+
 .form-group input {
   height: 2rem;
   padding-left: .33em;

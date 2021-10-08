@@ -1,13 +1,35 @@
 .todo {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  --height: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
+/*  */
+/*  */
+/*  */
+
+.counter {
+  width: var(--height);
+  height: var(--height);
+  background-color: rgb(50, 134, 78);
+  color: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*  */
+/*  */
+/*  */
+
 .content {
+  width: 100%;
   padding: .2em;
   user-select: none;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(45deg, rgb(184, 225, 249), rgb(133, 196, 232));
 }
 
 .content > span:first-child {
@@ -18,12 +40,19 @@
   font-style: italic;
 }
 
+.done {
+  text-decoration: line-through;
+}
+
+/*  */
+/*  */
+/*  */
+
 .delete {
-  --size: 50px;
   display: grid;
   place-items: center;
-  height: var(--size);
-  width: var(--size);
+  height: var(--height);
+  width: var(--height);
 }
 
 .delete button {
@@ -36,8 +65,4 @@
 .delete button:hover {
   background-color: #333;
   color: white;
-}
-
-.done {
-  text-decoration: line-through;
 }

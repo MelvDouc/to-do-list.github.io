@@ -7,6 +7,7 @@ import { Todo } from 'src/app/types/Todo';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+  @Input() counter!: number;
   @Input() todo!: Todo;
   @Output() divClick = new EventEmitter();
   @Output() btnClick = new EventEmitter();

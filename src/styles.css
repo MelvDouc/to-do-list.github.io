@@ -16,6 +16,10 @@ body {
   height: 100vh;
   min-height: 100vh;
   font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/img/purple-moutain.jpg");
 }
 
 button {
