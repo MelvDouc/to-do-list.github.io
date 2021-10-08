@@ -1,0 +1,18 @@
+header h1 {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: teal;
+  color: white;
+  font-size: 2.5rem;
+  padding: .33em;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+main > * {
+  padding: 1em;
+}

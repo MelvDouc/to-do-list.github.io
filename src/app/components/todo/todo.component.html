@@ -1,0 +1,13 @@
+<div class="todo">
+  <div
+    class="content"
+    [ngClass]="{'done': todo.isDone}"
+    (dblclick)="onDivClick()"
+   >
+    <span>{{ todo.content }}</span>
+    <span>{{ todo.date }}</span>
+  </div>
+  <div class="delete">
+    <button (click)="onButtonClick()">×</button>
+  </div>
+</div>

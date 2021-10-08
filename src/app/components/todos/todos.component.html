@@ -1,0 +1,9 @@
+<ol id="todos">
+  <li *ngFor="let todo of todos">
+    <app-todo
+      [todo]="todo"
+      (divClick)="toggleDone(todo.id)"
+      (btnClick)="remove(todo.id)"
+    ></app-todo>
+  </li>
+</ol>

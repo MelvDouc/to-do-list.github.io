@@ -1,0 +1,26 @@
+ol {
+  list-style: none;
+}
+
+li {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+li:first-child {
+  counter-reset: index;
+}
+
+li::before {
+	content: counter(index, decimal);
+	counter-increment: index;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	padding: .5em;
+	width: max-content;
+	display: grid;
+	place-items: center;
+	height: 100%;
+}
